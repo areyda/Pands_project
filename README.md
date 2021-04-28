@@ -33,9 +33,11 @@ Similarly to the intent that Fisher had for the data, data models have been gene
 * Seaborn 
 
 **Python**
+
 Python is known as a powerful programming language, which was originally created by Guido van Rossum in late 1980, with its first release in 1991. Python has efficient high-level data structures and a simple but effective approach to object-orientated programming. It is an interpreted language, meaning that the code can be run as soon as it written. Due to the simple syntax, Python is a popular choice for beginner programmers and has several applications such as web development, machine learning, data analysis, scripting, game development and embedded application development. 
 
 **Visual Studio Code**
+
 Visual Studio Code (VS Code) is a source-code editor created by Microsoft, available on Windows, Linux and MacOS platforms. The application supports source code debugging, intelligent code completion, code snipping and embedded Git functionality to track code changes. VS Code also provides for the installation of extensions for added functionality and enhanced customization of the application for the user. 
 
 **GitHub**
@@ -44,12 +46,15 @@ GitHub is a web-based version control and collaboration platform for software de
 
 
 **Pandas**
+
 Pandas is an open source software library package developed for the Python programming language for analysis and manipulation of data. Pandas works perfectly well for data stored in a spreadsheet or database in a tabular form such as a comma separated values (csv), JavaScript Object Notation (JSON) and Structed Query Language (SQL) and Microsoft Excel. This type of data is referred to as a Dataframe in pandas. 
 
 **Matplotlib**
+
 Matplotlib is a plotting library created for the Python programming language, with a similar design to MATLAB and utilises Numpy, the numerical extension of Python. It allows for quick visualization of data from Python by allowing various plot types to be built such as bar plot, box plot, histogram, pie chart and scatterplot. Matplotlib is included within the Anaconda installer package. 
 
 **Seaborn** 
+
 Seaborn is a Python data visualization library based on matplotlib, consisting of a high-level interface for creating informative statistical graphics. Seaborn is known to work well with Pandas dataframes. 
 
 

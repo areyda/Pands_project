@@ -1,0 +1,24 @@
+Dataframe Shape: (150, 5)
+
+
+Number of rows for each variable: 
+Variety
+Setosa        50
+Versicolor    50
+Virginica     50
+dtype: int64
+
+
+Dataset data types: 
+Sepal Length    float64
+Sepal Width     float64
+Petal Length    float64
+Petal Width     float64
+Variety          object
+dtype: object
+
+
+Sample of Iris Dataset: 
+None
+
+

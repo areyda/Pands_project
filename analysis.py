@@ -13,8 +13,16 @@ import io
 # The dataframe could also have been imported by including the relevant URL in the string format.
 df = pd.read_csv("iris.csv")
 
+# Slicing Dataframe per Iris Variety: 
+Setdf = df.loc[df["variety"] == "Setosa"]
+Setdf.columns = ["Sepal Length(cm)", "Sepal Width(cm)", "Petal Length(cm)", "Petal Width(cm)", "Variety"]
+Verdf = df.loc[df["variety"] == "Versicolor"]
+Verdf.columns = ["Sepal Length(cm)", "Sepal Width(cm)", "Petal Length(cm)", "Petal Width(cm)", "Variety"]
+Virdf = df.loc[df["variety"] == "Virginica"]
+Virdf.columns = ["Sepal Length(cm)", "Sepal Width(cm)", "Petal Length(cm)", "Petal Width(cm)", "Variety"]
+
 # Dataframe columns as per string
-df.columns = ["Sepal Length", "Sepal Width", "Petal Length", "Petal Width", "Variety"]
+df.columns = ["Sepal Length(cm)", "Sepal Width(cm)", "Petal Length(cm)", "Petal Width(cm)", "Variety"]
 # Dataframe grouped by Variety 
 grouped = df.groupby("Variety")
 
@@ -59,6 +67,19 @@ with open (filename, "a") as f:
     f.write (str(Null))
     f.write ("\n\n")
 
+# Duplicate Verification 
+SumDup = df.duplicated().sum()
+with open (filename, "a") as f: 
+    f.write ("Duplicate Verification\n" "Number of Duplicate Values: ")
+    f.write (str(SumDup))
+    f.write ("\n\n")
+
+Dup = df[df.duplicated()]
+with open (filename,"a") as f:
+    f.write ("Row")
+    f.write (str(Dup))
+    f.write ("\n\n")
+
 
 # Display the first 5 rows of the dataset
 Head = df.head()
@@ -76,11 +97,73 @@ with open (filename, "a") as f:
     f.write ("\n\n\n")
 
 
-# Display the dataset statistic characteristics 
-#print (df.describe(include ="all"))
+# Display random sample (15) of the dataset
+Sample = df.sample(15)
+with open (filename, "a") as f:
+    f.write ("Random Sample of 15 Rows: \n\n")
+    f.write (str(Sample))
+    f.write ("\n\n\n")
 
+
+# Display the dataset statistic characteristics - total dataset 
 Desc = df.describe(include = "all")
 with open (filename, "a") as f: 
-    f.write ("Statistical Characteristics for the dataset: \n")
+    f.write ("Statistical Characteristics - Total Dataset: \n\n")
     f.write (str(Desc))
-    f.write ("\n\n")
+    f.write ("\n\n\n")
+
+
+# Display the dataset statistic characteristics - Setosa
+SDesc = Setdf.describe()
+with open (filename, "a") as f: 
+    f.write ("Statistical Characteristics - Setosa Variety: \n\n")
+    f.write (str(SDesc))
+    f.write ("\n\n\n")
+
+
+# Display the dataset statistic characteristics - Versicolor 
+VerDesc = Verdf.describe()
+with open (filename, "a") as f: 
+    f.write ("Statistical Characteristics - Versicolor Variety: \n\n")
+    f.write (str(VerDesc))
+    f.write ("\n\n\n")
+
+
+# Display the dataset statistic characteristics - Virginica 
+VirDesc = Virdf.describe()
+with open (filename, "a") as f: 
+    f.write ("Statistical Characteristics - Virginica Variety: \n\n")
+    f.write (str(VirDesc))
+    f.write ("\n\n\n")
+
+
+# Display the Data Correlation - Total Dataset 
+TCorr = df.corr()
+with open (filename, "a") as f:
+    f.write ("Data Correlation - Total Dataset: \n\n")
+    f.write (str(TCorr))
+    f.write ("\n\n\n")
+
+
+# Display the Data Correlation - Setosa Variety  
+SCorr = Setdf.corr()
+with open (filename, "a") as f:
+    f.write ("Data Correlation - Setosa Variety: \n\n")
+    f.write (str(SCorr))
+    f.write ("\n\n\n")
+
+
+# Display the Data Correlation - Versicolor Variety  
+VerCorr = Verdf.corr()
+with open (filename, "a") as f:
+    f.write ("Data Correlation - Versicolor Variety: \n\n")
+    f.write (str(VerCorr))
+    f.write ("\n\n\n")
+
+
+# Display the Data Correlation - Virginica Variety  
+VirCorr = Virdf.corr()
+with open (filename, "a") as f:
+    f.write ("Data Correlation - Virginica Variety: \n\n")
+    f.write (str(VirCorr))
+    f.write ("\n\n\n")

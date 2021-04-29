@@ -70,21 +70,21 @@ Last 5 Rows of Dataset:
 Random Sample of 15 Rows: 
 
      Sepal Length(cm)  Sepal Width(cm)  Petal Length(cm)  Petal Width(cm)     Variety
-45                4.8              3.0               1.4              0.3      Setosa
+106               4.9              2.5               4.5              1.7   Virginica
 15                5.7              4.4               1.5              0.4      Setosa
-8                 4.4              2.9               1.4              0.2      Setosa
-14                5.8              4.0               1.2              0.2      Setosa
-85                6.0              3.4               4.5              1.6  Versicolor
+63                6.1              2.9               4.7              1.4  Versicolor
+19                5.1              3.8               1.5              0.3      Setosa
 4                 5.0              3.6               1.4              0.2      Setosa
-77                6.7              3.0               5.0              1.7  Versicolor
-143               6.8              3.2               5.9              2.3   Virginica
-47                4.6              3.2               1.4              0.2      Setosa
-0                 5.1              3.5               1.4              0.2      Setosa
-92                5.8              2.6               4.0              1.2  Versicolor
+121               5.6              2.8               4.9              2.0   Virginica
+144               6.7              3.3               5.7              2.5   Virginica
+56                6.3              3.3               4.7              1.6  Versicolor
+69                5.6              2.5               3.9              1.1  Versicolor
 135               7.7              3.0               6.1              2.3   Virginica
-136               6.3              3.4               5.6              2.4   Virginica
-73                6.1              2.8               4.7              1.2  Versicolor
-25                5.0              3.0               1.6              0.2      Setosa
+66                5.6              3.0               4.5              1.5  Versicolor
+142               5.8              2.7               5.1              1.9   Virginica
+131               7.9              3.8               6.4              2.0   Virginica
+41                4.5              2.3               1.3              0.3      Setosa
+47                4.6              3.2               1.4              0.2      Setosa
 
 
 Statistical Characteristics - Total Dataset: 

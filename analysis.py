@@ -5,6 +5,7 @@
 
 # Import libaries below: 
 from numpy.core.arrayprint import str_format
+from numpy.matrixlib import defmatrix
 import pandas as pd 
 import matplotlib.pyplot as plt 
 import seaborn as sns 
@@ -16,12 +17,12 @@ import io
 df = pd.read_csv("iris.csv")
 
 #  Setting Dataframes per Iris Variety and inclusion of the unit of measurement with the columns: 
-Setdf = df.loc[df["variety"] == "Setosa"]
-Setdf.columns = ["Sepal Length(cm)", "Sepal Width(cm)", "Petal Length(cm)", "Petal Width(cm)", "Variety"]
-Verdf = df.loc[df["variety"] == "Versicolor"]
-Verdf.columns = ["Sepal Length(cm)", "Sepal Width(cm)", "Petal Length(cm)", "Petal Width(cm)", "Variety"]
-Virdf = df.loc[df["variety"] == "Virginica"]
-Virdf.columns = ["Sepal Length(cm)", "Sepal Width(cm)", "Petal Length(cm)", "Petal Width(cm)", "Variety"]
+Set = df.loc[df["variety"] == "Setosa"]
+Set.columns = ["Sepal Length(cm)", "Sepal Width(cm)", "Petal Length(cm)", "Petal Width(cm)", "Variety"]
+Ver = df.loc[df["variety"] == "Versicolor"]
+Ver.columns = ["Sepal Length(cm)", "Sepal Width(cm)", "Petal Length(cm)", "Petal Width(cm)", "Variety"]
+Vir = df.loc[df["variety"] == "Virginica"]
+Vir.columns = ["Sepal Length(cm)", "Sepal Width(cm)", "Petal Length(cm)", "Petal Width(cm)", "Variety"]
 
 # Dataframe columns as per string inclusion of the unit of measurement with the columns: 
 df.columns = ["Sepal Length(cm)", "Sepal Width(cm)", "Petal Length(cm)", "Petal Width(cm)", "Variety"]
@@ -121,7 +122,7 @@ with open (filename, "a") as f:
 
 
 # Display the dataset statistic characteristics - Setosa
-SDesc = Setdf.describe()
+SDesc = Set.describe()
 with open (filename, "a") as f: 
     f.write ("Statistical Characteristics - Setosa Variety: \n\n")
     f.write (str(SDesc))
@@ -129,7 +130,7 @@ with open (filename, "a") as f:
 
 
 # Display the dataset statistic characteristics - Versicolor 
-VerDesc = Verdf.describe()
+VerDesc = Ver.describe()
 with open (filename, "a") as f: 
     f.write ("Statistical Characteristics - Versicolor Variety: \n\n")
     f.write (str(VerDesc))
@@ -137,7 +138,7 @@ with open (filename, "a") as f:
 
 
 # Display the dataset statistic characteristics - Virginica 
-VirDesc = Virdf.describe()
+VirDesc = Vir.describe()
 with open (filename, "a") as f: 
     f.write ("Statistical Characteristics - Virginica Variety: \n\n")
     f.write (str(VirDesc))
@@ -153,7 +154,7 @@ with open (filename, "a") as f:
 
 
 # Display the Data Correlation - Setosa Variety  
-SCorr = Setdf.corr()
+SCorr = Set.corr()
 with open (filename, "a") as f:
     f.write ("Data Correlation - Setosa Variety: \n\n")
     f.write (str(SCorr))
@@ -161,7 +162,7 @@ with open (filename, "a") as f:
 
 
 # Display the Data Correlation - Versicolor Variety  
-VerCorr = Verdf.corr()
+VerCorr = Ver.corr()
 with open (filename, "a") as f:
     f.write ("Data Correlation - Versicolor Variety: \n\n")
     f.write (str(VerCorr))
@@ -169,14 +170,14 @@ with open (filename, "a") as f:
 
 
 # Display the Data Correlation - Virginica Variety  
-VirCorr = Virdf.corr()
+VirCorr = Vir.corr()
 with open (filename, "a") as f:
     f.write ("Data Correlation - Virginica Variety: \n\n")
     f.write (str(VirCorr))
     f.write ("\n\n\n")
 
 
-# DATA VISUALIZATION 
+# DATA VISUALIZATION - Matplotlib
 
 # Histogram - Generate and save - All Varieties
 df.hist(figsize = (8,6))
@@ -184,18 +185,91 @@ plt.suptitle ("Iris Dataset Histogram")
 plt.savefig("PNG\Hist_All.png")
 
 # Histogram - Generate and save - Setosa Variety 
-Setdf.hist(figsize = (8,6))
+Set.hist(figsize = (8,6))
 plt.suptitle ("Iris Data Histogram - Setosa Variety")
 plt.savefig("PNG\Hist_Setosa.png")
 
 # Histogram - Generate and save - Versicolor Variety 
-Verdf.hist(figsize = (8,6))
+Ver.hist(figsize = (8,6))
 plt.suptitle ("Iris Data Histogram - Versicolor Variety")
 plt.savefig("PNG\Hist_Versicolor.png")
 
 # Histogram - Generate and save - Virginica Variety 
-Virdf.hist(figsize = (8,6))
+Vir.hist(figsize = (8,6))
 plt.suptitle ("Iris Data Histogram - Virginica Variety")
 plt.savefig("PNG\Hist_Virginica.png")
+
+##https://www.geeksforgeeks.org/how-to-set-a-single-main-title-for-all-the-subplots-in-matplotlib/
+
+# Scatterplot - Generate and save - All Varieties
+plt.scatter(df["Petal Length(cm)"], df["Petal Width(cm)"])
+plt.title ("Petal Length vs. Petal Width - All Species")
+plt.xlabel ("Petal Length (cm)")
+plt.ylabel ("Petal Width (cm)")
+plt.show()
+
+
+plt.scatter(df["Sepal Length(cm)"], df["Sepal Width(cm)"])
+plt.title ("Sepal Length vs. Sepal Width - All Species")
+plt.xlabel ("Sepal Length (cm)")
+plt.ylabel ("Sepal Width (cm)")
+plt.show()
+
+# Scatterplot - Generate and save - Setosa Variety 
+plt.scatter(Set["Petal Length(cm)"], Set["Petal Width(cm)"])
+plt.title ("Petal Length vs. Petal Width - Setosa")
+plt.xlabel ("Petal Length (cm)")
+plt.ylabel ("Petal Width (cm)")
+plt.show()
+
+plt.scatter(Set["Sepal Length(cm)"], Set["Sepal Width(cm)"])
+plt.title ("Sepal Length vs. Sepal Width - Setosa")
+plt.xlabel ("Sepal Length (cm)")
+plt.ylabel ("Sepal Width (cm)")
+plt.show()
+
+
+# Scatterplot - Generate and save - Versicolor Variety 
+plt.scatter(Ver["Petal Length(cm)"], Ver["Petal Width(cm)"])
+plt.title ("Petal Length vs. Petal Width - Versicolor")
+plt.xlabel ("Petal Length (cm)")
+plt.ylabel ("Petal Width (cm)")
+plt.show()
+
+plt.scatter(Ver["Sepal Length(cm)"], Ver["Sepal Width(cm)"])
+plt.title ("Sepal Length vs. Sepal Width - Versicolor")
+plt.xlabel ("Sepal Length (cm)")
+plt.ylabel ("Sepal Width (cm)")
+plt.show()
+
+
+# Scatterplot - Generate and save - Virginica Variety 
+plt.scatter(Vir["Petal Length(cm)"], Vir["Petal Width(cm)"])
+plt.title ("Petal Length vs. Petal Width - Virginica")
+plt.xlabel ("Petal Length (cm)")
+plt.ylabel ("Petal Width (cm)")
+plt.show()
+
+plt.scatter(Vir["Sepal Length(cm)"], Vir["Sepal Width(cm)"])
+plt.title ("Sepal Length vs. Sepal Width - Virginica")
+plt.xlabel ("Sepal Length (cm)")
+plt.ylabel ("Sepal Width (cm)")
+plt.show()
+
+# DATA VISUALIZATION - Seaborn
+sns.scatterplot (x ="Petal Length(cm)", y="Petal Width(cm)", hue= "Variety", data=df)
+plt.title ("Scatterplot Petal Length vs. Petal Width - All Varieties")
+plt.show()
+
+sns.scatterplot (x="Sepal Length(cm)", y="Sepal Width(cm)", hue="Variety", data=df)
+plt.title ("Scatterplot Sepal Length vs. Sepal Width - All Varieties")
+plt.show()
+
+sns.pairplot(df, hue="Variety")
+plt.show()
+
+
+
+
 
 

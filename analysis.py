@@ -30,7 +30,7 @@ with open (filename, "w") as f:
 # Display the # of rows associated for each of the variables. 
 Count = df.groupby("Variety").size()
 with open (filename, "a") as f:
-    f.write ("Number of rows for each variable: \n")
+    f.write ("Number of rows associated with each variable: \n")
     f.write (str(Count))
     f.write ('\n\n\n')
 
@@ -41,7 +41,7 @@ with open (filename, "a") as f:
     f.write (str(Types))
     f.write ("\n\n\n")
 
-# Display a portion and provide information about dataset
+# Display information about dataset
 buffer = io.StringIO()
 df.info(buf=buffer)
 s = buffer.getvalue()
@@ -52,6 +52,35 @@ with open (filename, "a") as f:
 
 ## https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.info.html
 
+# Verify that null values are absent 
+Null = df.isnull().sum()
+with open (filename, "a") as f:
+    f.write ("Null Value Check: \n\n")
+    f.write (str(Null))
+    f.write ("\n\n")
 
 
+# Display the first 5 rows of the dataset
+Head = df.head()
+with open (filename, "a") as f:
+    f.write ("First 5 Rows of Dataset: \n\n")
+    f.write (str(Head))
+    f.write ("\n\n")
 
+
+# Display the last 5 rows of the dataset
+Tail = df.tail()
+with open (filename, "a") as f: 
+    f.write ("Last 5 Rows of Dataset: \n\n")
+    f.write (str(Tail))
+    f.write ("\n\n\n")
+
+
+# Display the dataset statistic characteristics 
+#print (df.describe(include ="all"))
+
+Desc = df.describe(include = "all")
+with open (filename, "a") as f: 
+    f.write ("Statistical Characteristics for the dataset: \n")
+    f.write (str(Desc))
+    f.write ("\n\n")

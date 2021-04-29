@@ -1,4 +1,6 @@
 # PANDS Project 2021 - Investigation and Analysis of the Iris Dataset. 
+# The output for this code is included in the summary.txt file
+# Summary of Investigation and Analysis is included in the READ.md file
 # Author - Amy Reynolds 
 
 # Import libaries below: 
@@ -13,7 +15,7 @@ import io
 # The dataframe could also have been imported by including the relevant URL in the string format.
 df = pd.read_csv("iris.csv")
 
-# Slicing Dataframe per Iris Variety: 
+#  Setting Dataframes per Iris Variety and inclusion of the unit of measurement with the columns: 
 Setdf = df.loc[df["variety"] == "Setosa"]
 Setdf.columns = ["Sepal Length(cm)", "Sepal Width(cm)", "Petal Length(cm)", "Petal Width(cm)", "Variety"]
 Verdf = df.loc[df["variety"] == "Versicolor"]
@@ -21,12 +23,17 @@ Verdf.columns = ["Sepal Length(cm)", "Sepal Width(cm)", "Petal Length(cm)", "Pet
 Virdf = df.loc[df["variety"] == "Virginica"]
 Virdf.columns = ["Sepal Length(cm)", "Sepal Width(cm)", "Petal Length(cm)", "Petal Width(cm)", "Variety"]
 
-# Dataframe columns as per string
+# Dataframe columns as per string inclusion of the unit of measurement with the columns: 
 df.columns = ["Sepal Length(cm)", "Sepal Width(cm)", "Petal Length(cm)", "Petal Width(cm)", "Variety"]
 # Dataframe grouped by Variety 
 grouped = df.groupby("Variety")
 
+# Setting output file to filename
 filename = "summary.txt"
+
+
+
+# DATASET INVESTIGATION AND ANALYSIS - See output file - summary.txt
 
 # Display the shape of the dataframe - number of rows and columns for the dataset
 Shape = df.shape
@@ -167,3 +174,28 @@ with open (filename, "a") as f:
     f.write ("Data Correlation - Virginica Variety: \n\n")
     f.write (str(VirCorr))
     f.write ("\n\n\n")
+
+
+# DATA VISUALIZATION 
+
+# Histogram - Generate and save - All Varieties
+df.hist(figsize = (8,6))
+plt.suptitle ("Iris Dataset Histogram")
+plt.savefig("PNG\Hist_All.png")
+
+# Histogram - Generate and save - Setosa Variety 
+Setdf.hist(figsize = (8,6))
+plt.suptitle ("Iris Data Histogram - Setosa Variety")
+plt.savefig("PNG\Hist_Setosa.png")
+
+# Histogram - Generate and save - Versicolor Variety 
+Verdf.hist(figsize = (8,6))
+plt.suptitle ("Iris Data Histogram - Versicolor Variety")
+plt.savefig("PNG\Hist_Versicolor.png")
+
+# Histogram - Generate and save - Virginica Variety 
+Virdf.hist(figsize = (8,6))
+plt.suptitle ("Iris Data Histogram - Virginica Variety")
+plt.savefig("PNG\Hist_Virginica.png")
+
+

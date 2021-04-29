@@ -7,6 +7,7 @@ import pandas as pd
 import matplotlib.pyplot as plt 
 import seaborn as sns 
 import numpy as py
+import io
 
 # Import the dataset - The dataframe (df) is where pd (pandas library) reads the iris csv file. 
 # The dataframe could also have been imported by including the relevant URL in the string format.
@@ -41,12 +42,15 @@ with open (filename, "a") as f:
     f.write ("\n\n\n")
 
 # Display a portion and provide information about dataset
-Info = df.info()
+buffer = io.StringIO()
+df.info(buf=buffer)
+s = buffer.getvalue()
 with open (filename, "a") as f: 
-    f.write ("Sample of Iris Dataset: \n")
-    f.write (str(Info))
-    f.write ("\n\n\n")
+    f.write ("Iris Dataset Information: \n")
+    f.write ((s))
+    f.write ("\n\n")
 
+## https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.info.html
 
 
 

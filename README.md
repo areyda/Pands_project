@@ -82,37 +82,37 @@ From analysis of the data in the table, larger mean values are shown are the pet
 
 # Visualization of the Dataset 
 
-Histograms 
+**Histograms** 
 
 The matplotlib histograms generated demonstrates the attribute data across the 3 species. From viewing the histogram set, it is clearly evident that the measurement values for the Versicolor and Virginica are more aligned to each other than that of the setosa species. Also, it appears that there is greater variation across the petal measurements in comparison to the sepal measurements which display a more aligned distribution throughout the species. This differentiation in measurement across the dataset indicates for the potential to identify a particular species, or at least the elimination of one species, based on the information generated from the histogram set. 
 
 For the Seaborn generated histograms, which displays overlap between species, similar trends can be seen. Looking at species in regards to sepal length, there is a considerable level of overlap and as such would not assist in the classification problem. Likewise, with the sepal width, this displays even further overlapping. However in contrast, the petal measurements display less of an overlap for the veriscolor and viriginica species, with the setosa species displaying good separation from the other species. Therefore, petal length and petal width would be considered as more promising features to make a assess the prediction of a species when input data is provided.
 
 
-Boxplot
+**Boxplot**
 
 The analysis from the Boxplots, is displaying the setosa species having smaller measurement values with less distribution, with the versicolor remaining the average of all the species. The virginica is showing the highest distribution across the group for the measurement values. 
 
 
-Correlations
+**Correlations**
 
 Based on the output for data correlation, it is easily apparent that values generated for the petal length and petal width are the most correlated on the heatmap, showing a value of r=0.96, showing a strong linear relationship. However, with the sepal length and sepal width features only displaying a slight correlation with each other.
 
 
-Scatterplot 
+**Scatterplot** 
 
 From analysis of the scatterplots displaying sepal length vs sepal width, it can be seen that the Setosa species consists of a smaller sepal length but a larger width. For the versicolor, the sepal length lies in the middle in comparison to the others, as the virginica contain the largest sepal lengths, with smaller sepal widths.  
 
 In contrast for the petal length vs petal width, the setosa species displays the small petal length and width, similar to the sepal measurements, the versicolor species again lies in the middle of the species, with an average petal length and width. Likewise, the virginica species have the largest petal measurements. 
 
 
-Pairplot 
+**Pairplot** 
 
 On viewing of the pairplot set, a high correlation can be identifed between the petal length and petal width measurements. Similar to the indications in the scatterplot, setosa is showing lower petal length and width values with the sepal width measurements higher and lenght having lower values.
 For the versicolor species again, this is displaying average petal and sepal measurements. As for virginica, same trend is identified here with larger measurements for petal dimensions and smaller values associated with sepal width and larger values for sepal length.   
 
 
-Conclusion 
+# Conclusion 
 
 The Iris dataset is considered as a well-known classification problem. From the results generated as part of this project and from the extensive resources available online, applying Exploratory Data Analysis through the python programming language, demonstrates its importance and signifance as a powerful data science method in assisting with predicting a particular species when input data is available. 
 The power of EDA is supported by the data manipulation and visualization packages, such as pandas, matplotlib and seaborn.

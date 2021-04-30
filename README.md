@@ -126,4 +126,4 @@ Additional analysis for machine learning will be applied through the SciKit-lear
 
 # 6. References 
 
-
+[1](https://en.wikipedia.org/wiki/Iris_flower_data_set#cite_note-anderson36-2). 

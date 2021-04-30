@@ -377,7 +377,7 @@ plt.close()
 sns.barplot(data=df)
 plt.title ("Barplot of Variables - Iris Dataset")
 plt.savefig("PNG\Barplot_All.png")
-plt.close
+plt.close()
 
 
 #Boxplot - Generate and Save - Petal Length 

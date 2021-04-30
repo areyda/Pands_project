@@ -1,6 +1,6 @@
 # PANDS Project 2021 - Investigation and Analysis of the Iris Dataset. 
-# The output for this code is included in the summary.txt file
-# Summary of Investigation and Analysis is included in the READ.md file
+# summary.txt file provides the output for this code below. 
+# READ.md file provides the results for the Investigation and Analysis 
 # Author - Amy Reynolds 
 
 # Import libaries below: 
@@ -201,6 +201,9 @@ plt.savefig("PNG\Hist_Virginica.png")
 
 ##https://www.geeksforgeeks.org/how-to-set-a-single-main-title-for-all-the-subplots-in-matplotlib/
 
+# Need to review the scatterplots from matplotlib...
+
+
 # Scatterplot - Generate and save - All Varieties
 plt.scatter(df["Petal Length(cm)"], df["Petal Width(cm)"])
 plt.title ("Petal Length vs. Petal Width - All Species")
@@ -257,19 +260,36 @@ plt.ylabel ("Sepal Width (cm)")
 plt.show()
 
 # DATA VISUALIZATION - Seaborn
-sns.scatterplot (x ="Petal Length(cm)", y="Petal Width(cm)", hue= "Variety", data=df)
+# Scatterplot - Generate and save - All Varieties - Petal Length vs Petal Width
+sns.scatterplot (x ="Petal Length(cm)", y="Petal Width(cm)", hue= "Variety",data = df)
 plt.title ("Scatterplot Petal Length vs. Petal Width - All Varieties")
 plt.show()
 
-sns.scatterplot (x="Sepal Length(cm)", y="Sepal Width(cm)", hue="Variety", data=df)
+# Scatterplot - Generate and save - All Varieties - Sepal Length vs Sepal Width
+sns.scatterplot (x="Sepal Length(cm)", y="Sepal Width(cm)", hue="Variety",data = df)
 plt.title ("Scatterplot Sepal Length vs. Sepal Width - All Varieties")
 plt.show()
 
+# Pairplot - All Varieties 
 sns.pairplot(df, hue="Variety")
+plt.subplots_adjust(top=0.95)
+plt.suptitle ("Pairplot of the Iris Dataset")
 plt.show()
 
+##https://stackoverflow.com/questions/28638158/seaborn-facetgrid-how-to-leave-proper-space-on-top-for-suptitle
 
 
+##Histogram for each variable - Generate and save - All Varieties 
+sns.histplot(x="Petal Length(cm)", hue="Variety", data = df)
+plt.show()
 
+sns.histplot(x="Petal Width(cm)",  hue="Variety", data = df)
+plt.show()
+
+sns.histplot(x="Sepal Length(cm)", hue="Variety", data = df)
+plt.show()
+
+sns.histplot(x="Sepal Width(cm)",  hue="Variety", data = df)
+plt.show()
 
 

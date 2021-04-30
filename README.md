@@ -126,8 +126,8 @@ Additional analysis for machine learning will be applied through the SciKit-lear
 **ReadMe References**
 
 
-[1] https://en.wikipedia.org/wiki/Iris_flower_data_set#cite_note-anderson36-2
-[2] https://towardsdatascience.com/the-iris-dataset-a-little-bit-of-history-and-biology-fb4812f5a7b5
+[1] https://en.wikipedia.org/wiki/Iris_flower_data_set#cite_note-anderson36-2 \
+[2] https://towardsdatascience.com/the-iris-dataset-a-little-bit-of-history-and-biology-fb4812f5a7b5 \
 [3] https://beginnersbook.com/2018/01/introduction-to-python-programming/
 [4] https://pandas.pydata.org/pandas-docs/stable/user_guide/io.html
 [5] https://medium.com/@atanudan/exploratory-data-analysis-eda-in-python-893f963cc0c0

@@ -23,6 +23,8 @@ This dataset is widely available online to download for analysis. It is consider
 
 Similarly to the intent that Fisher had for the data, data models have been generated for machine learning where measurement data has been provided as an input, in order to predict the Iris species as an output.
 
+![](PNG/IRIS_image.png)
+
 
 
 # 2. Software Requirements 

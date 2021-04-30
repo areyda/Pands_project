@@ -34,7 +34,13 @@ filename = "summary.txt"
 
 
 
-# DATASET INVESTIGATION AND ANALYSIS - See output file - summary.txt
+
+
+################################### DATASET INVESTIGATION AND ANALYSIS - See output file - summary.txt  ###################################
+
+
+
+
 
 # Display the shape of the dataframe - number of rows and columns for the dataset
 Shape = df.shape
@@ -177,59 +183,70 @@ with open (filename, "a") as f:
     f.write ("\n\n\n")
 
 
-# DATA VISUALIZATION - Matplotlib
+
+
+################################### DATA VISUALIZATION - Matplotlib ###################################
+
+
 
 # Histogram - Generate and save - All Varieties
 df.hist(figsize = (8,6))
 plt.suptitle ("Iris Dataset Histogram")
 plt.savefig("PNG\Hist_All.png")
+plt.close()
 
 # Histogram - Generate and save - Setosa Variety 
 Set.hist(figsize = (8,6))
 plt.suptitle ("Iris Data Histogram - Setosa Variety")
 plt.savefig("PNG\Hist_Setosa.png")
+plt.close()
 
 # Histogram - Generate and save - Versicolor Variety 
 Ver.hist(figsize = (8,6))
 plt.suptitle ("Iris Data Histogram - Versicolor Variety")
 plt.savefig("PNG\Hist_Versicolor.png")
+plt.close()
 
 # Histogram - Generate and save - Virginica Variety 
 Vir.hist(figsize = (8,6))
 plt.suptitle ("Iris Data Histogram - Virginica Variety")
 plt.savefig("PNG\Hist_Virginica.png")
+plt.close()
 
 ##https://www.geeksforgeeks.org/how-to-set-a-single-main-title-for-all-the-subplots-in-matplotlib/
 
-# Need to review the scatterplots from matplotlib...
-
-
 # Scatterplot - Generate and save - All Varieties
 plt.scatter(df["Petal Length(cm)"], df["Petal Width(cm)"])
-plt.title ("Petal Length vs. Petal Width - All Species")
+plt.title ("Petal Length vs. Petal Width - All Varieties")
 plt.xlabel ("Petal Length (cm)")
 plt.ylabel ("Petal Width (cm)")
-plt.show()
+plt.savefig("PNG\Scat_PLPW_All.png")
+plt.close()
 
 
 plt.scatter(df["Sepal Length(cm)"], df["Sepal Width(cm)"])
 plt.title ("Sepal Length vs. Sepal Width - All Species")
 plt.xlabel ("Sepal Length (cm)")
 plt.ylabel ("Sepal Width (cm)")
-plt.show()
+plt.savefig("PNG\Scat_SLSW_All.png")
+plt.close()
+
 
 # Scatterplot - Generate and save - Setosa Variety 
 plt.scatter(Set["Petal Length(cm)"], Set["Petal Width(cm)"])
 plt.title ("Petal Length vs. Petal Width - Setosa")
 plt.xlabel ("Petal Length (cm)")
 plt.ylabel ("Petal Width (cm)")
-plt.show()
+plt.savefig("PNG\Scat_PLPW_Setosa.png")
+plt.close()
+
 
 plt.scatter(Set["Sepal Length(cm)"], Set["Sepal Width(cm)"])
 plt.title ("Sepal Length vs. Sepal Width - Setosa")
 plt.xlabel ("Sepal Length (cm)")
 plt.ylabel ("Sepal Width (cm)")
-plt.show()
+plt.savefig("PNG\Scat_SLSW_Setosa.png")
+plt.close()
 
 
 # Scatterplot - Generate and save - Versicolor Variety 
@@ -237,13 +254,16 @@ plt.scatter(Ver["Petal Length(cm)"], Ver["Petal Width(cm)"])
 plt.title ("Petal Length vs. Petal Width - Versicolor")
 plt.xlabel ("Petal Length (cm)")
 plt.ylabel ("Petal Width (cm)")
-plt.show()
+plt.savefig("PNG\Scat_PLPW_Versicolor.png")
+plt.close()
+
 
 plt.scatter(Ver["Sepal Length(cm)"], Ver["Sepal Width(cm)"])
 plt.title ("Sepal Length vs. Sepal Width - Versicolor")
 plt.xlabel ("Sepal Length (cm)")
 plt.ylabel ("Sepal Width (cm)")
-plt.show()
+plt.savefig("PNG\Scat_SLSW_Versicolor.png")
+plt.close()
 
 
 # Scatterplot - Generate and save - Virginica Variety 
@@ -251,45 +271,136 @@ plt.scatter(Vir["Petal Length(cm)"], Vir["Petal Width(cm)"])
 plt.title ("Petal Length vs. Petal Width - Virginica")
 plt.xlabel ("Petal Length (cm)")
 plt.ylabel ("Petal Width (cm)")
-plt.show()
+plt.savefig("PNG\Scat_PLPW_Virginica.png")
+plt.close()
+
+
 
 plt.scatter(Vir["Sepal Length(cm)"], Vir["Sepal Width(cm)"])
 plt.title ("Sepal Length vs. Sepal Width - Virginica")
 plt.xlabel ("Sepal Length (cm)")
 plt.ylabel ("Sepal Width (cm)")
-plt.show()
+plt.savefig("PNG\Scat_SLSW_Virginica.png")
+plt.close()
 
-# DATA VISUALIZATION - Seaborn
+
+################################### DATA VISUALIZATION - Seaborn  ###################################
+
+
+
 # Scatterplot - Generate and save - All Varieties - Petal Length vs Petal Width
 sns.scatterplot (x ="Petal Length(cm)", y="Petal Width(cm)", hue= "Variety",data = df)
 plt.title ("Scatterplot Petal Length vs. Petal Width - All Varieties")
-plt.show()
+plt.savefig("PNG\snsScat_PLPW_All.png")
+plt.close()
 
 # Scatterplot - Generate and save - All Varieties - Sepal Length vs Sepal Width
 sns.scatterplot (x="Sepal Length(cm)", y="Sepal Width(cm)", hue="Variety",data = df)
 plt.title ("Scatterplot Sepal Length vs. Sepal Width - All Varieties")
-plt.show()
+plt.savefig("PNG\snsScat_SLSW_All.png")
+plt.close()
 
 # Pairplot - All Varieties 
 sns.pairplot(df, hue="Variety")
 plt.subplots_adjust(top=0.95)
 plt.suptitle ("Pairplot of the Iris Dataset")
-plt.show()
+plt.savefig("PNG\Pairplot_All.png")
+plt.close()
+
 
 ##https://stackoverflow.com/questions/28638158/seaborn-facetgrid-how-to-leave-proper-space-on-top-for-suptitle
 
 
-##Histogram for each variable - Generate and save - All Varieties 
+#Histogram for each variable - Generate and save - All Varieties 
 sns.histplot(x="Petal Length(cm)", hue="Variety", data = df)
-plt.show()
+plt.title ("Histogram of Petal Length - Iris Dataset")
+plt.savefig("PNG\snsHist_PL_All.png")
+plt.close()
+
 
 sns.histplot(x="Petal Width(cm)",  hue="Variety", data = df)
-plt.show()
+plt.title ("Histogram of Petal Width - Iris Dataset")
+plt.savefig("PNG\snsHist_PW_All.png")
+plt.close()
+
 
 sns.histplot(x="Sepal Length(cm)", hue="Variety", data = df)
-plt.show()
+plt.title ("Histogram of Sepal Length - Iris Dataset")
+plt.savefig("PNG\snsHist_SL_All.png")
+plt.close()
+
 
 sns.histplot(x="Sepal Width(cm)",  hue="Variety", data = df)
-plt.show()
+plt.title ("Histogram of Sepal Width - Iris Dataset")
+plt.savefig("PNG\snsHist_SW_All.png")
+plt.close()
 
 
+
+#Heatmap for all variables - Generate and save -  All Varieties 
+corr = df.corr()
+fig, ax = plt.subplots (figsize =(12,8))
+sns.heatmap(corr, annot=True)
+plt.title ("Heatmap of Correlation Values - Iris Dataset \n", size= 20)
+plt.savefig("PNG\HeatCorr_All.png")
+plt.close()
+
+
+#Heatmap for all variables - Generate and save -  Setosa
+corr = Set.corr()
+fig, ax = plt.subplots (figsize =(12,8))
+sns.heatmap(corr, annot=True)
+plt.title ("Heatmap of Correlation Values - Setosa \n", size= 20)
+plt.savefig("PNG\HeatCorr_Setosa.png")
+plt.close()
+
+#Heatmap for all variables - Generate and save -  Versicolor
+corr = Ver.corr()
+fig, ax = plt.subplots (figsize =(12,8))
+sns.heatmap(corr, annot=True, ax=ax)
+plt.title ("Heatmap of Correlation Values - Versicolor \n", size= 20)
+plt.savefig("PNG\HeatCorr_Veriscolor.png")
+plt.close()
+
+#Heatmap for all variables - Generate and save -  Virginica
+corr = Vir.corr()
+fig, ax = plt.subplots (figsize =(12,8))
+sns.heatmap(corr, annot=True)
+plt.title ("Heatmap of Correlation Values - Virginica \n", size= 20)
+plt.savefig("PNG\HeatCorr_Virginica.png")
+plt.close()
+
+## https://stackoverflow.com/questions/50259125/make-python-seaborn-heatmap-bigger
+
+
+#Barplot - All Varieties 
+sns.barplot(data=df)
+plt.title ("Barplot of Variables - Iris Dataset")
+plt.savefig("PNG\Barplot_All.png")
+plt.close
+
+
+#Boxplot - Generate and Save - Petal Length 
+sns.boxplot(x="Variety", y="Petal Length(cm)", data=df)
+plt.title ("Petal Length Boxplot - Iris Dataset")
+plt.savefig("PNG\Boxplot_PL.png")
+plt.close()
+
+
+#Boxplot - Generate and Save - Petal Width 
+sns.boxplot(x="Variety", y="Petal Width(cm)", data=df)
+plt.title ("Petal Width Boxplot - Iris Dataset")
+plt.savefig("PNG\Boxplot_PW.png")
+plt.close()
+
+#Boxplot - Generate and Save - Sepal Length 
+sns.boxplot(x="Variety", y="Sepal Length(cm)", data=df)
+plt.title ("Sepal Length Boxplot - Iris Dataset")
+plt.savefig("PNG\Boxplot_SL.png")
+plt.close()
+
+#Boxplot - Generate and Save - Sepal Width
+sns.boxplot(x="Variety", y="Sepal Width(cm)", data=df)
+plt.title ("Sepal Width Boxplot - Iris Dataset")
+plt.savefig("PNG\Boxplot_SW.png")
+plt.close()

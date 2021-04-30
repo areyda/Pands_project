@@ -128,16 +128,16 @@ Additional analysis for machine learning will be applied through the SciKit-lear
 
 [1] https://en.wikipedia.org/wiki/Iris_flower_data_set#cite_note-anderson36-2 \
 [2] https://towardsdatascience.com/the-iris-dataset-a-little-bit-of-history-and-biology-fb4812f5a7b5 \
-[3] https://beginnersbook.com/2018/01/introduction-to-python-programming/
-[4] https://pandas.pydata.org/pandas-docs/stable/user_guide/io.html
-[5] https://medium.com/@atanudan/exploratory-data-analysis-eda-in-python-893f963cc0c0
-[6] https://towardsdatascience.com/exploratory-data-analysis-in-python-c9a77dfa39ce 
+[3] https://beginnersbook.com/2018/01/introduction-to-python-programming/ \
+[4] https://pandas.pydata.org/pandas-docs/stable/user_guide/io.html \
+[5] https://medium.com/@atanudan/exploratory-data-analysis-eda-in-python-893f963cc0c0 \
+[6] https://towardsdatascience.com/exploratory-data-analysis-in-python-c9a77dfa39ce  \
 
 
 **Source Code References**
 
 
-[1] https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.info.html
-[2] https://www.geeksforgeeks.org/how-to-set-a-single-main-title-for-all-the-subplots-in-matplotlib/
-[3] https://stackoverflow.com/questions/28638158/seaborn-facetgrid-how-to-leave-proper-space-on-top-for-suptitle
-[4] https://stackoverflow.com/questions/50259125/make-python-seaborn-heatmap-bigger
+[1] https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.info.html \
+[2] https://www.geeksforgeeks.org/how-to-set-a-single-main-title-for-all-the-subplots-in-matplotlib/ \
+[3] https://stackoverflow.com/questions/28638158/seaborn-facetgrid-how-to-leave-proper-space-on-top-for-suptitle \
+[4] https://stackoverflow.com/questions/50259125/make-python-seaborn-heatmap-bigger \

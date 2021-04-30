@@ -59,7 +59,7 @@ Seaborn is a Python data visualization library based on matplotlib, consisting o
 
 
 
-# Analysis of the Dataset
+# 3. Analysis of the Dataset
 
 Exploratory Data Analysis (EDA) is referred to as the understanding of the dataset by summarizing the main characteristics and plotting the data visually.  This is usually the first step in data analysis and will often assist in defining/verifying the problem statement or the definition on our data set. 
 
@@ -80,7 +80,7 @@ The statistical information was gathered with the use of the describe function, 
 From analysis of the data in the table, larger mean values are shown are the petal and sepal lengths in comparison to the corresponding width values. 
 
 
-# Visualization of the Dataset 
+# 4. Visualization of the Dataset 
 
 **Histograms** 
 
@@ -112,11 +112,14 @@ On viewing of the pairplot set, a high correlation can be identifed between the 
 For the versicolor species again, this is displaying average petal and sepal measurements. As for virginica, same trend is identified here with larger measurements for petal dimensions and smaller values associated with sepal width and larger values for sepal length.   
 
 
-# Conclusion 
+# 5. Conclusion 
 
 The Iris dataset is considered as a well-known classification problem. From the results generated as part of this project and from the extensive resources available online, applying Exploratory Data Analysis through the python programming language, demonstrates its importance and signifance as a powerful data science method in assisting with predicting a particular species when input data is available. 
 The power of EDA is supported by the data manipulation and visualization packages, such as pandas, matplotlib and seaborn.
 
 Additional analysis for machine learning will be applied through the SciKit-learn library for python at a later stage for this dataset.  
+
+
+# 6. References 
 
 

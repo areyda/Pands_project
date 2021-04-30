@@ -115,7 +115,7 @@ For the versicolor species again, this is displaying average petal and sepal mea
 
 # 5. Conclusion 
 
-The Iris dataset is considered as a well-known classification problem. From the results generated as part of this project and from the extensive resources available online, applying Exploratory Data Analysis through the python programming language, demonstrates its importance and signifance as a powerful data science method in assisting with predicting a particular species when input data is available. 
+The Iris dataset is considered to be a well-known classification problem. From the results generated as part of this project and from the extensive resources available online, applying Exploratory Data Analysis through the python programming language, demonstrates its importance and signifance as a powerful data science method in assisting with predicting a particular species when input data is available. 
 The power of EDA is supported by the data manipulation and visualization packages, such as pandas, matplotlib and seaborn.
 
 Additional analysis for machine learning will be applied through the SciKit-learn library for python at a later stage for this dataset.  
@@ -131,7 +131,7 @@ Additional analysis for machine learning will be applied through the SciKit-lear
 [3] https://beginnersbook.com/2018/01/introduction-to-python-programming/ \
 [4] https://pandas.pydata.org/pandas-docs/stable/user_guide/io.html \
 [5] https://medium.com/@atanudan/exploratory-data-analysis-eda-in-python-893f963cc0c0 \
-[6] https://towardsdatascience.com/exploratory-data-analysis-in-python-c9a77dfa39ce  \
+[6] https://towardsdatascience.com/exploratory-data-analysis-in-python-c9a77dfa39ce 
 
 
 **Source Code References**
@@ -140,4 +140,4 @@ Additional analysis for machine learning will be applied through the SciKit-lear
 [1] https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.info.html \
 [2] https://www.geeksforgeeks.org/how-to-set-a-single-main-title-for-all-the-subplots-in-matplotlib/ \
 [3] https://stackoverflow.com/questions/28638158/seaborn-facetgrid-how-to-leave-proper-space-on-top-for-suptitle \
-[4] https://stackoverflow.com/questions/50259125/make-python-seaborn-heatmap-bigger \
+[4] https://stackoverflow.com/questions/50259125/make-python-seaborn-heatmap-bigger 

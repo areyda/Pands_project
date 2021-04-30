@@ -1,5 +1,4 @@
-# Programming and Scripting 2021 - Project - Iris Dataset
-
+### Programming and Scripting 2021 - Project - Iris Dataset
 The purpose of this repository is to document the research and investigation of the well-known Iris Dataset. 
 
 ### Project Outline and Objectives
@@ -47,7 +46,8 @@ GitHub is a web-based version control and collaboration platform for software de
 
 **Pandas**
 
-Pandas is an open source software library package developed for the Python programming language for analysis and manipulation of data. Pandas works perfectly well for data stored in a spreadsheet or database in a tabular form such as a comma separated values (csv), JavaScript Object Notation (JSON) and Structed Query Language (SQL) and Microsoft Excel. This type of data is referred to as a Dataframe in pandas. 
+Pandas is an open source software library package developed for the Python programming language for analysis and manipulation of data. Pandas works perfectly well for data stored in a spreadsheet or database in a tabular form such as a comma separated values (csv), JavaScript Object Notation (JSON) and Structured Query Language (SQL) and Microsoft Excel. This type of data is referred to as a dataframe in pandas. 
+
 
 **Matplotlib**
 
@@ -56,6 +56,27 @@ Matplotlib is a plotting library created for the Python programming language, wi
 **Seaborn** 
 
 Seaborn is a Python data visualization library based on matplotlib, consisting of a high-level interface for creating informative statistical graphics. Seaborn is known to work well with Pandas dataframes. 
+
+
+
+
+# Dataset Analysis 
+Exploratory Data Analysis (EDA) is referred to as the understanding of the dataset by summarizing the main characteristics and plotting the data visually.  This is usually the first step in data analysis and will often assist in defining/verifying the problem statement or the definition on our data set. 
+
+REF https://medium.com/@atanudan/exploratory-data-analysis-eda-in-python-893f963cc0c0
+
+EDA was performed using pandas to load the dataset and gather statistical information, then Matploblib and Seaborn was used to generate the various plots and identify patterns across the data.  
+
+Dataset Description: 
+  
+Firstly, basic descriptive information was obtained about the dataset such as determining the dataframe dimensionality, number of rows associated with each variable, displaying a sample of the data and the data types included within the dataset. A summary information table was also generated using the info function from the pandas library and null value check was performed. This analysis verified that the loading and interpretation of the dataset was successful in the pandas package, as the dataframe dimensionality and the summary table verified the presence of 150 rows with 5 columns. 4 columns contained the sepal and petal length and width measurements, which were identified as a float data type. The final column was characterized as an object datatype as it consisted of the 3 species of Iris. The count function filtered by species showing that the dataset contained equal quantities of sample data across the 3 species, showing 50 rows for each of the Iris species. The null value check confirmed that no null values were present within the dataset. One row of values was identified as a duplicated from the virginica species. 
+
+
+
+
+
+
+
 
 
 

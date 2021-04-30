@@ -1,7 +1,7 @@
-### Programming and Scripting 2021 - Project - Iris Dataset
+# Programming and Scripting 2021 - Project - Iris Dataset
 The purpose of this repository is to document the research and investigation of the well-known Iris Dataset. 
 
-### Project Outline and Objectives
+## Project Outline and Objectives
 The project consisted of the following: 
 * Research the Iris Dataset online and write a summary. 
 * Download the Iris Dataset and add it to the repository. 

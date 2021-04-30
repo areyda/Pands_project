@@ -63,7 +63,7 @@ with open (filename, "a") as f:
     f.write (str(Types))
     f.write ("\n\n\n")
 
-# Display information about dataset
+# Display information about dataset - ## [1] https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.info.html
 buffer = io.StringIO()
 df.info(buf=buffer)
 s = buffer.getvalue()
@@ -72,7 +72,6 @@ with open (filename, "a") as f:
     f.write ((s))
     f.write ("\n\n")
 
-## https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.info.html
 
 # Verify that null values are absent 
 Null = df.isnull().sum()
@@ -189,7 +188,7 @@ with open (filename, "a") as f:
 
 
 
-# Histogram - Generate and save - All Varieties
+# Histogram - Generate and save - All Varieties - ## [2] https://www.geeksforgeeks.org/how-to-set-a-single-main-title-for-all-the-subplots-in-matplotlib/
 df.hist(figsize = (8,6))
 plt.suptitle ("Iris Dataset Histogram")
 plt.savefig("PNG\Hist_All.png")
@@ -213,7 +212,7 @@ plt.suptitle ("Iris Data Histogram - Virginica Variety")
 plt.savefig("PNG\Hist_Virginica.png")
 plt.close()
 
-##https://www.geeksforgeeks.org/how-to-set-a-single-main-title-for-all-the-subplots-in-matplotlib/
+
 
 # Scatterplot - Generate and save - All Varieties
 plt.scatter(df["Petal Length(cm)"], df["Petal Width(cm)"])
@@ -300,15 +299,12 @@ plt.title ("Scatterplot Sepal Length vs. Sepal Width - All Varieties")
 plt.savefig("PNG\snsScat_SLSW_All.png")
 plt.close()
 
-# Pairplot - All Varieties 
+# Pairplot - All Varieties - ## [3] ##https://stackoverflow.com/questions/28638158/seaborn-facetgrid-how-to-leave-proper-space-on-top-for-suptitle
 sns.pairplot(df, hue="Variety")
 plt.subplots_adjust(top=0.95)
 plt.suptitle ("Pairplot of the Iris Dataset")
 plt.savefig("PNG\Pairplot_All.png")
 plt.close()
-
-
-##https://stackoverflow.com/questions/28638158/seaborn-facetgrid-how-to-leave-proper-space-on-top-for-suptitle
 
 
 #Histogram for each variable - Generate and save - All Varieties 
@@ -354,6 +350,7 @@ plt.title ("Heatmap of Correlation Values - Setosa \n", size= 20)
 plt.savefig("PNG\HeatCorr_Setosa.png")
 plt.close()
 
+
 #Heatmap for all variables - Generate and save -  Versicolor
 corr = Ver.corr()
 fig, ax = plt.subplots (figsize =(12,8))
@@ -362,15 +359,14 @@ plt.title ("Heatmap of Correlation Values - Versicolor \n", size= 20)
 plt.savefig("PNG\HeatCorr_Veriscolor.png")
 plt.close()
 
-#Heatmap for all variables - Generate and save -  Virginica
+
+#Heatmap for all variables - Generate and save -  Virginica ## [4]https://stackoverflow.com/questions/50259125/make-python-seaborn-heatmap-bigger
 corr = Vir.corr()
 fig, ax = plt.subplots (figsize =(12,8))
 sns.heatmap(corr, annot=True)
 plt.title ("Heatmap of Correlation Values - Virginica \n", size= 20)
 plt.savefig("PNG\HeatCorr_Virginica.png")
 plt.close()
-
-## https://stackoverflow.com/questions/50259125/make-python-seaborn-heatmap-bigger
 
 
 #Barplot - All Varieties 

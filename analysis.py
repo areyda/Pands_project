@@ -1,6 +1,7 @@
 # PANDS Project 2021 - Investigation and Analysis of the Iris Dataset. 
 # summary.txt file provides the output for this code below. 
 # READ.md file provides the results for the Investigation and Analysis 
+# PNG Folder contains all generated plots 
 # Author - Amy Reynolds 
 
 # Import libaries below: 
